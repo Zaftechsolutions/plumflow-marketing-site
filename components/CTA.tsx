@@ -1,4 +1,5 @@
 import { Phone } from "lucide-react";
+import BookDemoButton from "./BookDemoButton";
 
 export default function CTA() {
   return (
@@ -7,7 +8,7 @@ export default function CTA() {
         <h2>Your next commercial contract is sitting in someone&apos;s inbox.<br />Go get it.</h2>
         <p>Plumbing companies that contact the right people with the right message at the right time win more contracts. PlumFlow makes that the default, not the exception.</p>
         <div className="cta-btns">
-          <a href="https://app.plumflow.io" className="btn-cta">Book a Free Demo &rarr;</a>
+          <BookDemoButton className="btn-cta">Book a Free Demo &rarr;</BookDemoButton>
           <a href="https://app.plumflow.io" className="btn-cta-o">
             <Phone size={16} strokeWidth={2.2} style={{ display: "inline-block", verticalAlign: -3 }} />
             Talk to Sales

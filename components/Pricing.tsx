@@ -1,3 +1,5 @@
+import BookDemoButton from "./BookDemoButton";
+
 export default function Pricing() {
   return (
     <section className="pricing" id="pricing">
@@ -46,7 +48,7 @@ export default function Pricing() {
               <li>AI Sales Advisor</li>
               <li>KPI goal tracking</li>
             </ul>
-            <a href="https://app.plumflow.io" className="btn-price">Book a Demo</a>
+            <BookDemoButton className="btn-price">Book a Demo</BookDemoButton>
           </div>
 
           <div className="price-card">

@@ -1,4 +1,5 @@
 import { Droplets } from "lucide-react";
+import BookDemoButton from "./BookDemoButton";
 
 export default function Nav() {
   return (
@@ -17,7 +18,7 @@ export default function Nav() {
       </div>
       <div className="nav-right">
         <a href="https://app.plumflow.io" className="btn-ghost">Sign In</a>
-        <a href="https://app.plumflow.io" className="btn-nav">Book a Demo</a>
+        <BookDemoButton className="btn-nav">Book a Demo</BookDemoButton>
       </div>
     </nav>
   );
