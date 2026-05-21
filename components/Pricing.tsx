@@ -26,7 +26,7 @@ export default function Pricing() {
               <li className="off">Follow-up sequences</li>
               <li className="off">AI Sales Advisor</li>
             </ul>
-            <a href="#" className="btn-price">Get Started</a>
+            <a href="https://app.plumflow.io" className="btn-price">Get Started</a>
           </div>
 
           <div className="price-card pop">
@@ -46,7 +46,7 @@ export default function Pricing() {
               <li>AI Sales Advisor</li>
               <li>KPI goal tracking</li>
             </ul>
-            <a href="#" className="btn-price">Book a Demo</a>
+            <a href="https://app.plumflow.io" className="btn-price">Book a Demo</a>
           </div>
 
           <div className="price-card">
@@ -63,7 +63,7 @@ export default function Pricing() {
               <li>SLA guarantee</li>
               <li>Custom integrations</li>
             </ul>
-            <a href="#" className="btn-price">Talk to Sales</a>
+            <a href="https://app.plumflow.io" className="btn-price">Talk to Sales</a>
           </div>
 
         </div>

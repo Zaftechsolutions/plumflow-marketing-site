@@ -12,7 +12,7 @@ export default function Hero() {
           Stop depending on referrals. PlumFlow finds the right decision-makers, writes the right message, sends it at the right time, and tells you exactly who to follow up with next.
         </p>
         <div className="hero-btns">
-          <a href="#" className="btn-hero-p">Book a Free Demo &rarr;</a>
+          <a href="https://app.plumflow.io" className="btn-hero-p">Book a Free Demo &rarr;</a>
           <a href="#how" className="btn-hero-s">&#9654;&nbsp; See How It Works</a>
         </div>
       </div>

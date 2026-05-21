@@ -16,8 +16,8 @@ export default function Nav() {
         <a href="#testimonials">Reviews</a>
       </div>
       <div className="nav-right">
-        <a href="#" className="btn-ghost">Sign In</a>
-        <a href="#" className="btn-nav">Book a Demo</a>
+        <a href="https://app.plumflow.io" className="btn-ghost">Sign In</a>
+        <a href="https://app.plumflow.io" className="btn-nav">Book a Demo</a>
       </div>
     </nav>
   );
