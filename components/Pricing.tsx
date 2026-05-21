@@ -65,7 +65,7 @@ export default function Pricing() {
               <li>SLA guarantee</li>
               <li>Custom integrations</li>
             </ul>
-            <a href="https://app.plumflow.io" className="btn-price">Talk to Sales</a>
+            <a href="mailto:Zeeshanzafar1232@gmail.com" className="btn-price">Talk to Sales</a>
           </div>
 
         </div>

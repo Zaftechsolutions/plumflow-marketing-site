@@ -9,7 +9,7 @@ export default function CTA() {
         <p>Plumbing companies that contact the right people with the right message at the right time win more contracts. PlumFlow makes that the default, not the exception.</p>
         <div className="cta-btns">
           <BookDemoButton className="btn-cta">Book a Free Demo &rarr;</BookDemoButton>
-          <a href="https://app.plumflow.io" className="btn-cta-o">
+          <a href="mailto:Zeeshanzafar1232@gmail.com" className="btn-cta-o">
             <Phone size={16} strokeWidth={2.2} style={{ display: "inline-block", verticalAlign: -3 }} />
             Talk to Sales
           </a>
