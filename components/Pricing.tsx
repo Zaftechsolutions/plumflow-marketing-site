@@ -34,7 +34,7 @@ export default function Pricing() {
           <div className="price-card pop">
             <div className="pop-tag">Most Popular</div>
             <div className="price-name">Pro</div>
-            <div className="price-amt"><sup>$</sup>500</div>
+            <div className="price-amt"><sup>$</sup>499</div>
             <div className="price-per">per month, per company</div>
             <ul className="price-feats">
               <li>Unlimited leads</li>
