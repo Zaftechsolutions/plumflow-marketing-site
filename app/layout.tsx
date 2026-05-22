@@ -7,6 +7,10 @@ const inter = Inter({ subsets: ["latin"], weight: ["400","500","600","700","800"
 export const metadata: Metadata = {
   title: "PlumFlow AI — The Sales System Built for Commercial Plumbing",
   description: "Stop depending on referrals. PlumFlow finds the right decision-makers, writes the right message, sends it at the right time, and tells you exactly who to follow up with next.",
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
