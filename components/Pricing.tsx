@@ -11,25 +11,7 @@ export default function Pricing() {
         <p className="sec-sub" style={{ maxWidth: 480, margin: "0 auto" }}>
           No hidden fees. No per-seat charges. One straightforward price per operating company.
         </p>
-        <div className="price-grid">
-
-          <div className="price-card">
-            <div className="price-name">Starter</div>
-            <div className="price-amt"><sup>$</sup>299</div>
-            <div className="price-per">per month, 1 company</div>
-            <ul className="price-feats">
-              <li>Up to 1,000 leads</li>
-              <li>AI lead scoring</li>
-              <li>Email verification</li>
-              <li>Email generation (Step 1)</li>
-              <li>SMTP sending</li>
-              <li>Open and click tracking</li>
-              <li className="off">Multi-company dashboard</li>
-              <li className="off">Follow-up sequences</li>
-              <li className="off">AI Sales Advisor</li>
-            </ul>
-            <a href="https://app.plumflow.io" className="btn-price">Get Started</a>
-          </div>
+        <div className="price-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: 780, margin: '0 auto' }}>
 
           <div className="price-card pop">
             <div className="pop-tag">Most Popular</div>
