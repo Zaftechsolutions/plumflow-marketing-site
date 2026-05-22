@@ -43,7 +43,7 @@ function AnalyticsScreen() {
         </div>
         {[
           { name: 'Michael Torres', co: 'Harborview Hotels',     score: 94, status: 'Opened',  opens: 'x4', sc: '#22c55e' },
-          { name: 'Sarah Chen',     co: 'Pinnacle Properties',   score: 88, status: 'Sent',    opens: '—',  sc: '#3b82f6' },
+          { name: 'Sarah Chen',     co: 'Pinnacle Properties',   score: 88, status: 'Sent',    opens: '-',  sc: '#3b82f6' },
           { name: 'James Walker',   co: 'SunCoast Facilities',   score: 76, status: 'Opened',  opens: 'x2', sc: '#f59e0b' },
           { name: 'Lisa Martinez',  co: 'Summit Medical Group',  score: 91, status: 'Replied', opens: 'x6', sc: '#22c55e' },
         ].map((r, i) => (
@@ -147,16 +147,16 @@ function CampaignsScreen() {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C2FF" strokeWidth="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
           </div>
           <div>
-            <div style={{ fontSize: 13, fontWeight: 600, color: '#e2e8f0' }}>Keith Morrison — Marriott Charlotte</div>
+            <div style={{ fontSize: 13, fontWeight: 600, color: '#e2e8f0' }}>Keith Morrison, Marriott Charlotte</div>
             <div style={{ fontSize: 11, color: '#475569' }}>General Manager · Hospitality · Fit score 90</div>
           </div>
           <span style={{ marginLeft: 'auto', fontSize: 11, padding: '3px 10px', borderRadius: 20, background: 'rgba(239,68,68,0.12)', color: '#ef4444', fontWeight: 600 }}>Hot</span>
         </div>
-        <div style={{ fontSize: 11, color: '#475569', marginBottom: 6 }}>Subject: Grease trap compliance — Marriott Charlotte</div>
+        <div style={{ fontSize: 11, color: '#475569', marginBottom: 6 }}>Subject: Grease trap compliance: Marriott Charlotte</div>
         <div style={{ fontSize: 12.5, color: '#94a3b8', lineHeight: 1.7, borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 12 }}>
           Hi Keith,<br/><br/>
           With spring bringing the usual post-winter grease trap backups, I wanted to reach out about compliance maintenance at Marriott Charlotte. Commercial kitchens in your market are seeing 30% more health department inspections this quarter.<br/><br/>
-          ER Plumbing specializes in commercial grease trap pumping and emergency backflow work across Mecklenburg County — we keep facilities compliant so General Managers don't get caught off guard.<br/><br/>
+          ER Plumbing specializes in commercial grease trap pumping and emergency backflow work across Mecklenburg County. We keep facilities compliant so General Managers don't get caught off guard.<br/><br/>
           Would a 15-minute call this week make sense?
         </div>
       </div>
@@ -206,7 +206,7 @@ function AdvisorScreen() {
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
           </div>
           <div style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '14px 14px 14px 4px', padding: '14px 16px', fontSize: 13, color: '#94a3b8', lineHeight: 1.65 }}>
-            Try: <span style={{ color: '#00C2FF', fontWeight: 600 }}>"Grease trap compliance — [Restaurant Name]"</span>. Specific, problem-aware, no spam triggers. Avoid "following up" or anything with exclamation marks.
+            Try: <span style={{ color: '#00C2FF', fontWeight: 600 }}>"Grease trap compliance: [Restaurant Name]"</span>. Specific, problem-aware, no spam triggers. Avoid "following up" or anything with exclamation marks.
           </div>
         </div>
       </div>
@@ -240,7 +240,7 @@ export default function ProductDemo() {
             A glimpse inside PlumFlow
           </h2>
           <p style={{ fontSize: 16, color: '#4B5882', maxWidth: 520, margin: '0 auto', lineHeight: 1.7 }}>
-            From lead scoring to AI-written outreach to live reply tracking — here's a preview of what your team gets access to.
+            From lead scoring to AI-written outreach to live reply tracking. Here's a preview of what your team gets access to.
           </p>
         </div>
 
