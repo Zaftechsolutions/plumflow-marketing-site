@@ -11,10 +11,9 @@ export default function Pricing() {
         <p className="sec-sub" style={{ maxWidth: 480, margin: "0 auto" }}>
           No hidden fees. No per-seat charges. One straightforward price per operating company.
         </p>
-        <div className="price-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: 780, margin: '0 auto' }}>
+        <div className="price-grid" style={{ gridTemplateColumns: 'repeat(2, 1fr)', maxWidth: 820, margin: '48px auto 0' }}>
 
           <div className="price-card pop">
-            <div className="pop-tag">Most Popular</div>
             <div className="price-name">Pro</div>
             <div className="price-amt"><sup>$</sup>499</div>
             <div className="price-per">per month, per company</div>
