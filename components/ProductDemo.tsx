@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 const tabs = [
   { id: 'analytics', label: 'Analytics' },
@@ -214,7 +214,7 @@ function AdvisorScreen() {
   )
 }
 
-const screens: Record<string, JSX.Element> = {
+const screens: Record<string, React.ReactElement> = {
   analytics: <AnalyticsScreen />,
   leads:     <LeadsScreen />,
   campaigns: <CampaignsScreen />,
