@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import HowItWorks from "@/components/HowItWorks";
+import ProductDemo from "@/components/ProductDemo";
 import Features from "@/components/Features";
 import IndustryIntelligence from "@/components/IndustryIntelligence";
 import Testimonials from "@/components/Testimonials";
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Problem />
       <HowItWorks />
+      <ProductDemo />
       <Features />
       <IndustryIntelligence />
       <Testimonials />
