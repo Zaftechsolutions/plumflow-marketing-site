@@ -237,10 +237,10 @@ export default function ProductDemo() {
             padding: '5px 14px', borderRadius: 20, marginBottom: 16,
           }}>Live Product Preview</span>
           <h2 style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 800, color: '#080D24', letterSpacing: '-0.03em', lineHeight: 1.15, marginBottom: 16 }}>
-            See exactly what you're getting
+            A glimpse inside PlumFlow
           </h2>
           <p style={{ fontSize: 16, color: '#4B5882', maxWidth: 520, margin: '0 auto', lineHeight: 1.7 }}>
-            Real screens from inside PlumFlow. Click through to explore the platform before you sign up.
+            From lead scoring to AI-written outreach to live reply tracking — here's a preview of what your team gets access to.
           </p>
         </div>
 
@@ -307,9 +307,9 @@ export default function ProductDemo() {
         {/* CTA below demo */}
         <div style={{ textAlign: 'center', marginTop: 40 }}>
           <p style={{ fontSize: 14, color: '#8E9AC0', marginBottom: 20 }}>
-            Ready to run your first outreach campaign?
+            Want to see the full platform in action with your own data?
           </p>
-          <a href="/login" style={{
+          <a href="https://calendly.com/zeeshanzafar1232/30min" target="_blank" rel="noopener noreferrer" style={{
             display: 'inline-block',
             background: 'linear-gradient(135deg, #1B3CFF, #00C2FF)',
             color: '#fff', textDecoration: 'none',
@@ -318,7 +318,7 @@ export default function ProductDemo() {
             boxShadow: '0 8px 28px rgba(27,60,255,0.35)',
             letterSpacing: '-0.01em',
           }}>
-            Get started free →
+            Book a Demo →
           </a>
         </div>
 
