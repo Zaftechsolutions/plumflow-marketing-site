@@ -357,3 +357,37 @@ footer { background: #060818; padding: 60px 48px 28px; }
   .sec-h { font-size: clamp(24px, 7vw, 36px); }
   .sec-sub { font-size: 15px; }
 }
+
+/* ── Done-for-you strip ── */
+.dfy-strip {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  max-width: 1080px; margin: 28px auto 0;
+  background: var(--gray); border: 1.5px solid var(--border); border-radius: 16px;
+  padding: 22px 28px; flex-wrap: wrap;
+}
+.dfy-title { font-size: 16px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+.dfy-sub { font-size: 13.5px; color: var(--text2); line-height: 1.55; max-width: 640px; }
+.dfy-btn { flex-shrink: 0; padding: 13px 22px; background: var(--navy); color: #fff; border-color: var(--navy); }
+.dfy-btn:hover { background: var(--slate); }
+
+/* ── Cost comparison table ── */
+.cmp-h { font-size: 22px; font-weight: 800; color: var(--navy); letter-spacing: -.02em; margin: 72px auto 24px; }
+.cmp-scroll { overflow-x: auto; max-width: 1080px; margin: 0 auto; }
+.cmp-table {
+  width: 100%; min-width: 640px; border-collapse: separate; border-spacing: 0;
+  background: #fff; border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden;
+  font-size: 14px; text-align: left;
+}
+.cmp-table th, .cmp-table td { padding: 14px 20px; border-bottom: 1px solid var(--border); }
+.cmp-table thead th { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--text3); background: var(--gray); }
+.cmp-table tbody tr:last-child td { border-bottom: none; }
+.cmp-table td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; }
+.cmp-table td { color: var(--text2); }
+.cmp-table .cmp-hl { background: rgba(27,60,255,0.045); color: var(--navy); }
+.cmp-table thead .cmp-hl { color: var(--blue); }
+
+@media (max-width: 1000px) {
+  .pricing .price-grid { grid-template-columns: 1fr !important; max-width: 480px !important; }
+  .dfy-strip { flex-direction: column; text-align: center; }
+  .dfy-strip > div { text-align: center !important; }
+}
