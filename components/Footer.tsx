@@ -1,51 +1,44 @@
-import { Droplets } from "lucide-react";
+import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <div className="wrap">
-        <div className="foot-top">
-          <div className="foot-brand">
-            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
-              <div style={{ width: 32, height: 32, borderRadius: 8, background: "linear-gradient(135deg,#1B3CFF,#00C2FF)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <Droplets size={17} strokeWidth={2.2} color="#fff" />
-              </div>
-              <span style={{ fontSize: 16, fontWeight: 800, color: "#fff", letterSpacing: "-.02em" }}>
-                PlumFlow <span style={{ color: "#00C2FF" }}>AI</span>
-              </span>
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+              <img src="/mark.svg" alt="" style={{ width: 28, height: 28, borderRadius: 7 }} />
+              <b style={{ fontFamily: 'var(--font-d)', fontSize: 17, color: 'var(--d-tx)' }}>PlumFlow</b>
             </div>
-            <p>The sales system built for commercial plumbing companies. Find the right leads, send the right message, track every open, and follow up at the right time.</p>
+            <p>
+              The outbound sales system for commercial plumbing. Built inside a
+              five-company plumbing group, tested on real facility managers,
+              shipped because it worked.
+            </p>
           </div>
-          <div className="foot-cols">
-            <div className="foot-col">
-              <div className="foot-col-h">Product</div>
-              <a href="#">Features</a>
-              <a href="#">How It Works</a>
-              <a href="#">Pricing</a>
-              <a href="#">Changelog</a>
-            </div>
-            <div className="foot-col">
-              <div className="foot-col-h">Company</div>
-              <a href="#">About</a>
-              <a href="#">Blog</a>
-              <a href="#">Contact</a>
-              <a href="#">Careers</a>
-            </div>
-            <div className="foot-col">
-              <div className="foot-col-h">Legal</div>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Cookie Policy</a>
-              <a href="#">GDPR</a>
-            </div>
+          <div>
+            <h4>Product</h4>
+            <Link href="/platform">Platform</Link>
+            <Link href="/results">Results</Link>
+            <Link href="/pricing">Pricing</Link>
+            <a href="https://app.plumflow.io">Sign in</a>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="mailto:hello@plumflow.io">hello@plumflow.io</a>
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+          </div>
+          <div>
+            <h4>Built for</h4>
+            <span style={{ display: 'block', fontSize: 14.5, marginBottom: 11 }}>Commercial plumbing companies</span>
+            <span style={{ display: 'block', fontSize: 14.5, marginBottom: 11 }}>Mechanical contractors</span>
+            <span style={{ display: 'block', fontSize: 14.5 }}>Multi-OpCo trade groups</span>
           </div>
         </div>
-        <div className="foot-bottom">
-          <span>© 2026 PlumFlow AI. All rights reserved.</span>
-          <span style={{ display: "flex", alignItems: "center", gap: 5 }}>
-            Built for commercial plumbing
-            <Droplets size={13} strokeWidth={2} color="rgba(255,255,255,0.35)" />
-          </span>
+        <div className="footer-btm">
+          <span>© {new Date().getFullYear()} PlumFlow. All rights reserved.</span>
+          <span>Built in the field, not in a lab.</span>
         </div>
       </div>
     </footer>

@@ -1,51 +1,36 @@
 'use client';
 
-import { useState } from "react";
-import { Droplets, Menu, X } from "lucide-react";
-import BookDemoButton from "./BookDemoButton";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import BookDemoButton from './BookDemoButton';
+
+const LINKS = [
+  { href: '/platform', label: 'Platform' },
+  { href: '/results', label: 'Results' },
+  { href: '/pricing', label: 'Pricing' },
+];
 
 export default function Nav() {
-  const [open, setOpen] = useState(false);
-
+  const path = usePathname();
   return (
-    <>
-      <nav>
-        <a href="#" className="logo">
-          <div className="logo-icon">
-            <Droplets size={20} strokeWidth={2.2} color="#fff" />
-          </div>
-          <div className="logo-text">Plum<span>Flow</span> AI</div>
-        </a>
+    <nav className="nav">
+      <div className="nav-in">
+        <Link href="/" className="nav-logo">
+          <img src="/mark.svg" alt="" />
+          <b>PlumFlow</b>
+        </Link>
         <div className="nav-links">
-          <a href="#how">How It Works</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#testimonials">Reviews</a>
+          {LINKS.map(l => (
+            <Link key={l.href} href={l.href} className={path === l.href ? 'on' : ''}>
+              {l.label}
+            </Link>
+          ))}
         </div>
-        <div className="nav-right">
-          <a href="https://app.plumflow.io" className="btn-ghost">Sign In</a>
-          <BookDemoButton className="btn-nav">Book a Demo</BookDemoButton>
-        </div>
-        {/* Mobile hamburger */}
-        <button className="nav-hamburger" onClick={() => setOpen(!open)} aria-label="Menu">
-          {open
-            ? <X size={22} strokeWidth={2.2} color="#080D24" />
-            : <Menu size={22} strokeWidth={2.2} color="#080D24" />
-          }
-        </button>
-      </nav>
-
-      {/* Mobile menu */}
-      <div className={`nav-mobile-menu${open ? " open" : ""}`}>
-        <a href="#how" onClick={() => setOpen(false)}>How It Works</a>
-        <a href="#features" onClick={() => setOpen(false)}>Features</a>
-        <a href="#pricing" onClick={() => setOpen(false)}>Pricing</a>
-        <a href="#testimonials" onClick={() => setOpen(false)}>Reviews</a>
-        <div className="nav-mobile-cta">
-          <a href="https://app.plumflow.io" className="btn-ghost" onClick={() => setOpen(false)}>Sign In</a>
-          <BookDemoButton className="btn-nav" onClick={() => setOpen(false)}>Book a Demo</BookDemoButton>
+        <div className="nav-cta">
+          <a href="https://app.plumflow.io" className="nav-signin">Sign in</a>
+          <BookDemoButton className="nav-book">Book a demo</BookDemoButton>
         </div>
       </div>
-    </>
+    </nav>
   );
 }
