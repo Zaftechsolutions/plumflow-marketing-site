@@ -14,30 +14,56 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <header className="hero">
+        <div className="spec-strip" aria-hidden>
+          <div className="spec-strip-in">
+            <span>Outbound system <b>/</b> commercial plumbing</span>
+            <span>Running on five OpCos today</span>
+            <span>Charlotte · Jacksonville · Augusta · Baton Rouge</span>
+          </div>
+        </div>
         <div className="wrap">
-          <div className="hero-badge rv">
-            <i />
-            Running live inside a five-company plumbing group
+          <div className="hero-grid">
+            <div>
+              <h1 className="h1 rv">
+                Referrals built
+                <br />
+                your business.
+                <br />
+                <span style={{ color: 'var(--copper)' }}>Outbound will triple&nbsp;it.</span>
+              </h1>
+              <p className="hero-sub rv" data-d="1">
+                PlumFlow finds the facility managers who sign maintenance
+                contracts, writes outreach that sounds like you, and tells you
+                exactly who to call next. No SDR salary. No agency retainer.
+              </p>
+              <div className="hero-ctas rv" data-d="2">
+                <BookDemoButton className="btn btn-copper">
+                  Book a demo <ArrowRight size={16} />
+                </BookDemoButton>
+                <Link href="/platform" className="link-plain">See the platform ↗</Link>
+              </div>
+            </div>
+
+            {/* A dispatch ticket, not another dashboard mockup */}
+            <div className="ticket-stack rv" data-d="2" aria-hidden>
+              <div className="ticket-behind" />
+              <div className="ticket">
+                <div className="tk-hd">
+                  <b>PlumFlow · Lead ticket</b>
+                  <span>#0847</span>
+                </div>
+                <div className="tk-body">
+                  <div className="tk-row"><small>Prospect</small><span>Dana Whitfield</span></div>
+                  <div className="tk-row"><small>Title</small><span>Facility Manager</span></div>
+                  <div className="tk-row"><small>Property</small><span>Harborview Hotels · 3 sites</span></div>
+                  <div className="tk-row"><small>Fit score</small><span className="tk-good">92 · Tier 1</span></div>
+                  <div className="tk-row"><small>Angle</small><span>After-hours response time</span></div>
+                  <div className="tk-row"><small>Activity</small><span>Opened ×4 · replied Tue 9:14am</span></div>
+                  <div className="tk-stamp">Meeting booked</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <h1 className="h1 rv" data-d="1" style={{ maxWidth: 900 }}>
-            Referrals built your business.
-            <br />
-            <span className="h-serif" style={{ color: 'var(--copper)' }}>Outbound will triple it.</span>
-          </h1>
-          <p className="hero-sub rv" data-d="2">
-            PlumFlow finds the facility managers who sign maintenance contracts,
-            writes outreach that sounds like you, and tells you exactly who to
-            call next. No SDR salary. No agency retainer.
-          </p>
-          <div className="hero-ctas rv" data-d="3">
-            <BookDemoButton className="btn btn-copper">
-              Book a demo <ArrowRight size={16} />
-            </BookDemoButton>
-            <Link href="/platform" className="btn btn-ghost">See the platform</Link>
-          </div>
-          <p className="hero-note rv" data-d="4">
-            30 minutes. We run it on your service area, live.
-          </p>
 
           {/* Signature animation: a lead moving through the pipeline */}
           <div className="pipeline rv" data-d="3">
@@ -130,7 +156,7 @@ export default function Home() {
         <div className="wrap">
           <span className="eyebrow rv">The system</span>
           <h2 className="h2 rv" data-d="1" style={{ maxWidth: 620, margin: '18px 0 14px' }}>
-            One screen tells you <span className="h-serif" style={{ color: 'var(--copper)' }}>who to call today.</span>
+            One screen tells you <span style={{ color: 'var(--copper)' }}>who to call today.</span>
           </h2>
           <p className="lead rv" data-d="2" style={{ maxWidth: 560, marginBottom: 48 }}>
             Every lead, every send, every open, every reply. Scored, tracked,
@@ -245,7 +271,7 @@ export default function Home() {
             <div>
               <span className="eyebrow rv">The writing</span>
               <h2 className="h2 rv" data-d="1" style={{ margin: '18px 0 14px' }}>
-                Emails a facility manager <span className="h-serif" style={{ color: 'var(--copper)' }}>actually answers.</span>
+                Emails a facility manager <span style={{ color: 'var(--copper)' }}>actually answers.</span>
               </h2>
               <p className="lead rv" data-d="2" style={{ marginBottom: 24 }}>
                 Written one at a time, in plain text, about their building and
@@ -294,7 +320,7 @@ export default function Home() {
       <section className="sec dark dark-grid" style={{ textAlign: 'center' }}>
         <div className="wrap">
           <h2 className="h1 rv" style={{ fontSize: 'clamp(36px, 4.6vw, 60px)', maxWidth: 760, margin: '0 auto 18px' }}>
-            See it running <span className="h-serif" style={{ color: 'var(--copper-lt)' }}>on your leads.</span>
+            See it running <span style={{ color: 'var(--copper-lt)' }}>on your leads.</span>
           </h2>
           <p className="lead rv" data-d="1" style={{ maxWidth: 520, margin: '0 auto 36px' }}>
             Bring a list of 50 buildings you want as customers. We will score

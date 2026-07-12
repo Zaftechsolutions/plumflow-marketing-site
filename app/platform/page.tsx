@@ -142,7 +142,7 @@ export default function Platform() {
           <span className="eyebrow rv">Platform</span>
           <h1 className="h1 rv" data-d="1" style={{ maxWidth: 860, margin: '18px 0 20px', fontSize: 'clamp(38px, 4.8vw, 62px)' }}>
             Everything between a cold list and a
-            <span className="h-serif" style={{ color: 'var(--copper)' }}> signed contract.</span>
+            <span style={{ color: 'var(--copper)' }}> signed contract.</span>
           </h1>
           <p className="lead rv" data-d="2" style={{ maxWidth: 620 }}>
             Eight capabilities, one pipeline. Each one exists because outreach
@@ -209,7 +209,7 @@ export default function Platform() {
       <section className="sec dark dark-grid" style={{ textAlign: 'center' }}>
         <div className="wrap">
           <h2 className="h2 rv" style={{ maxWidth: 640, margin: '0 auto 16px' }}>
-            Thirty minutes. Your service area. <span className="h-serif" style={{ color: 'var(--copper-lt)' }}>Live.</span>
+            Thirty minutes. Your service area. <span style={{ color: 'var(--copper-lt)' }}>Live.</span>
           </h2>
           <p className="lead rv" data-d="1" style={{ maxWidth: 480, margin: '0 auto 34px' }}>
             The fastest way to judge it is to watch it score your own market.

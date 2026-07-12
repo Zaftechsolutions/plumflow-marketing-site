@@ -22,7 +22,7 @@ export default function Pricing() {
           <span className="eyebrow rv">Pricing</span>
           <h1 className="h1 rv" data-d="1" style={{ maxWidth: 860, margin: '18px 0 20px', fontSize: 'clamp(38px, 4.8vw, 62px)' }}>
             Priced like the hire it replaces.
-            <span className="h-serif" style={{ color: 'var(--copper)' }}> Minus the salary.</span>
+            <span style={{ color: 'var(--copper)' }}> Minus the salary.</span>
           </h1>
           <p className="lead rv" data-d="2" style={{ maxWidth: 620 }}>
             A junior SDR costs $75,000 a year, takes six months to learn the
@@ -123,7 +123,7 @@ export default function Pricing() {
           <span className="eyebrow rv">The math</span>
           <h2 className="h2 rv" data-d="1" style={{ maxWidth: 680, margin: '16px auto 22px' }}>
             One maintenance contract pays for
-            <span className="h-serif" style={{ color: 'var(--copper-lt)' }}> the whole year.</span>
+            <span style={{ color: 'var(--copper-lt)' }}> the whole year.</span>
           </h2>
           <p className="lead rv" data-d="2" style={{ maxWidth: 560, margin: '0 auto 40px' }}>
             A typical commercial maintenance agreement runs $2,000 to 5,000 a

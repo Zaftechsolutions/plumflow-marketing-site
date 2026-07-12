@@ -23,7 +23,7 @@ export default function Results() {
           <span className="eyebrow rv">Field report</span>
           <h1 className="h1 rv" data-d="1" style={{ maxWidth: 880, margin: '18px 0 20px', fontSize: 'clamp(38px, 4.8vw, 62px)' }}>
             One operator. Five plumbing companies.
-            <span className="h-serif" style={{ color: 'var(--copper)' }}> A working pipeline.</span>
+            <span style={{ color: 'var(--copper)' }}> A working pipeline.</span>
           </h1>
           <p className="lead rv" data-d="2" style={{ maxWidth: 640 }}>
             PlumFlow was not built as a product first. It was built inside a
@@ -132,7 +132,7 @@ export default function Results() {
       <section className="sec dark dark-grid" style={{ textAlign: 'center' }}>
         <div className="wrap">
           <h2 className="h2 rv" style={{ maxWidth: 620, margin: '0 auto 16px' }}>
-            Want this running in <span className="h-serif" style={{ color: 'var(--copper-lt)' }}>your market?</span>
+            Want this running in <span style={{ color: 'var(--copper-lt)' }}>your market?</span>
           </h2>
           <p className="lead rv" data-d="1" style={{ maxWidth: 480, margin: '0 auto 34px' }}>
             We will show you the exact system above, live, on your own service
