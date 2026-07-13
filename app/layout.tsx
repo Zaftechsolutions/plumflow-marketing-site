@@ -12,16 +12,16 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://plumflow.io"),
   title: "PlumFlow — The outbound sales system for commercial plumbing",
   description:
-    "PlumFlow finds the facility managers who sign maintenance contracts, writes outreach that sounds like you, and tells you exactly who to call next. Built inside a five-company plumbing group, not a lab.",
+    "PlumFlow finds the facility managers who sign maintenance contracts, writes outreach that sounds like you, and tells you exactly who to call next. Built for commercial plumbing companies across the United States.",
   openGraph: {
     title: "PlumFlow — The outbound sales system for commercial plumbing",
     description:
-      "Finds the right decision-makers, writes outreach that sounds like you, and tells you who to call next. Built inside a five-company plumbing group.",
+      "Finds the right decision-makers, writes outreach that sounds like you, and tells you who to call next. Built for commercial plumbing companies across the United States.",
     url: "https://plumflow.io",
     siteName: "PlumFlow",
     type: "website",
   },
-  icons: { icon: "/logo.png", apple: "/logo.png" },
+  icons: { icon: "/logo.svg", apple: "/logo.png" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -22,7 +22,7 @@ export default function Pricing() {
           <span className="eyebrow rv">Pricing</span>
           <h1 className="h1 rv" data-d="1" style={{ maxWidth: 860, margin: '18px 0 20px', fontSize: 'clamp(38px, 4.8vw, 62px)' }}>
             Priced like the hire it replaces.
-            <span style={{ color: 'var(--copper)' }}> Minus the salary.</span>
+            <span style={{ color: 'var(--accent)' }}> Minus the salary.</span>
           </h1>
           <p className="lead rv" data-d="2" style={{ maxWidth: 620 }}>
             A junior SDR costs $75,000 a year, takes six months to learn the
@@ -42,12 +42,12 @@ export default function Pricing() {
                   <th style={{ width: '34%' }}></th>
                   <th>Hiring an SDR</th>
                   <th>Marketing agency</th>
-                  <th style={{ color: 'var(--copper)' }}>PlumFlow</th>
+                  <th style={{ color: 'var(--accent)' }}>PlumFlow</th>
                 </tr>
               </thead>
               <tbody>
                 <tr><td>Knows commercial plumbing</td><td className="no">After 6+ months</td><td className="no">Never deeply</td><td className="yes">Built into it</td></tr>
-                <tr><td>Works every OpCo at once</td><td className="no">One territory</td><td className="no">Extra retainer each</td><td className="yes">Yes, one system</td></tr>
+                <tr><td>Works across every branch at once</td><td className="no">One territory</td><td className="no">Extra retainer each</td><td className="yes">Yes, one system</td></tr>
                 <tr><td>Follow-up discipline</td><td className="no">Depends on the person</td><td className="no">Batch and blast</td><td className="yes">Day 3, 5, 10, then stop</td></tr>
                 <tr><td>Reports you can audit</td><td className="no">Self-reported</td><td className="no">Vanity metrics</td><td className="yes">Raw counts, every Friday</td></tr>
                 <tr><td>Annual cost</td><td className="no">$75,000+ plus ramp</td><td className="no">$36,000 to 90,000</td><td className="yes">A fraction of either</td></tr>
@@ -99,7 +99,7 @@ export default function Pricing() {
               <p className="plan-for">Multi-company and PE portfolios</p>
               <ul>
                 {[
-                  'Every OpCo on one system with one login',
+                  'Every company on one system with one login',
                   'Portfolio dashboard across all markets',
                   'Cross-company learnings applied everywhere',
                   'Leadership reporting built for board decks',
@@ -123,7 +123,7 @@ export default function Pricing() {
           <span className="eyebrow rv">The math</span>
           <h2 className="h2 rv" data-d="1" style={{ maxWidth: 680, margin: '16px auto 22px' }}>
             One maintenance contract pays for
-            <span style={{ color: 'var(--copper-lt)' }}> the whole year.</span>
+            <span style={{ color: 'var(--accent-lt)' }}> the whole year.</span>
           </h2>
           <p className="lead rv" data-d="2" style={{ maxWidth: 560, margin: '0 auto 40px' }}>
             A typical commercial maintenance agreement runs $2,000 to 5,000 a

@@ -16,7 +16,7 @@ export default function Terms() {
             <p>PlumFlow is provided as a service under a signed agreement with each customer. That agreement, not this page, governs the commercial relationship: scope, pricing, term, and exit.</p>
             <p>You agree to use the platform lawfully, including applicable email and telemarketing regulations in your jurisdiction (such as CAN-SPAM in the United States). The system is built to help you comply, but the outreach is yours and sent in your name.</p>
             <p>Your data stays yours. Our code stays ours. Neither of us should be surprised by anything in the signed agreement.</p>
-            <p>Questions before signing anything? Email <a href="mailto:hello@plumflow.io" style={{ color: 'var(--copper)' }}>hello@plumflow.io</a>.</p>
+            <p>Questions before signing anything? Email <a href="mailto:hello@plumflow.io" style={{ color: 'var(--accent)' }}>hello@plumflow.io</a>.</p>
           </div>
         </div>
       </section>

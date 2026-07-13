@@ -6,7 +6,7 @@ import BookDemoButton from './BookDemoButton';
 
 const LINKS = [
   { href: '/platform', label: 'Platform' },
-  { href: '/results', label: 'Results' },
+  { href: '/results', label: 'Why it pays' },
   { href: '/pricing', label: 'Pricing' },
 ];
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, FileCheck, CalendarClock, Scale } from 'lucide-react';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import Fx from '@/components/Fx';
@@ -7,9 +7,9 @@ import BookDemoButton from '@/components/BookDemoButton';
 import CountUp from '@/components/CountUp';
 
 export const metadata: Metadata = {
-  title: 'Results — PlumFlow',
+  title: 'The economics — PlumFlow',
   description:
-    'How a five-company commercial plumbing group replaced ad-hoc referral selling with a working outbound system. Real numbers, including the parts that went wrong.',
+    'What one commercial maintenance contract is worth, what it takes to win it, and why PlumFlow pays for itself with the first win.',
 };
 
 export default function Results() {
@@ -20,110 +20,141 @@ export default function Results() {
 
       <header className="page-hero">
         <div className="wrap">
-          <span className="eyebrow rv">Field report</span>
+          <span className="eyebrow rv">The economics</span>
           <h1 className="h1 rv" data-d="1" style={{ maxWidth: 880, margin: '18px 0 20px', fontSize: 'clamp(38px, 4.8vw, 62px)' }}>
-            One operator. Five plumbing companies.
-            <span style={{ color: 'var(--copper)' }}> A working pipeline.</span>
+            One contract pays for the system.
+            <span style={{ color: 'var(--accent)' }}> Everything after is margin.</span>
           </h1>
           <p className="lead rv" data-d="2" style={{ maxWidth: 640 }}>
-            PlumFlow was not built as a product first. It was built inside a
-            private-equity-backed group of five commercial plumbing companies
-            because one outreach manager could not run five markets from
-            Outlook and spreadsheets. This is what happened, including the
-            parts that went wrong.
+            Commercial maintenance agreements are the most valuable revenue in
+            plumbing: recurring, predictable, and the first call when something
+            bursts at 2am. Outbound is how you get in the room for them. Here
+            is the math.
           </p>
         </div>
       </header>
 
-      {/* Numbers */}
+      {/* The numbers that matter: the buyer's economics */}
       <section className="sec-tight dark dark-grid">
         <div className="wrap">
           <div className="grid-3" style={{ gap: 44, textAlign: 'left' }}>
             <div className="rv" data-d="1">
-              <div className="stat-big"><CountUp value={15000} suffix="+" /></div>
-              <div className="stat-lbl">leads imported and scored across five markets in the Southeast</div>
+              <div className="stat-big"><CountUp value={50} prefix="$" suffix="k+" /></div>
+              <div className="stat-lbl">what a single commercial maintenance contract can be worth per year, before emergency call-outs are counted</div>
             </div>
             <div className="rv" data-d="2">
-              <div className="stat-big"><CountUp value={3} /> <em>meetings</em></div>
-              <div className="stat-lbl">booked in one week of a single cold email campaign</div>
+              <div className="stat-big">5 <em>to</em> 8</div>
+              <div className="stat-lbl">touches it typically takes before a facility manager responds. Almost nobody sustains that by hand</div>
             </div>
             <div className="rv" data-d="3">
-              <div className="stat-big"><CountUp value={2} /> <em>vendor deals</em></div>
-              <div className="stat-lbl">national vendor registrations opened directly from replies</div>
+              <div className="stat-big"><CountUp value={40} suffix="%" /></div>
+              <div className="stat-lbl">of bought lead lists can be people who will never hire a plumber. PlumFlow scores them out before you pay to reach them</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Story */}
+      {/* The napkin math */}
+      <section className="sec">
+        <div className="wrap">
+          <div className="grid-2" style={{ gap: 64, alignItems: 'center' }}>
+            <div>
+              <span className="eyebrow rv">The napkin math</span>
+              <h2 className="h2 rv" data-d="1" style={{ margin: '18px 0 14px' }}>
+                Run the numbers on <span style={{ color: 'var(--accent)' }}>one win.</span>
+              </h2>
+              <p className="lead rv" data-d="2" style={{ marginBottom: 24 }}>
+                Contracts compound. The building you sign this quarter renews
+                next year, adds emergency work in between, and refers the
+                property manager&apos;s next building. That is why one win covers
+                the system and then some.
+              </p>
+              <p className="rv" data-d="3" style={{ fontSize: 15, color: 'var(--tx-2)', lineHeight: 1.7 }}>
+                And that math assumes email alone. It ignores the LinkedIn
+                motion running beside it, the call list it builds for you, and
+                every lead that replies six months later because the follow-up
+                never dropped the ball.
+              </p>
+            </div>
+            <div className="letter rv" data-d="2">
+              <div className="letter-hd">
+                <span>Worked example</span>
+                <b>One maintenance agreement, held three years</b>
+              </div>
+              <div className="letter-body" style={{ fontFamily: 'var(--font-m)', fontSize: 14 }}>
+                <p style={{ display: 'flex', justifyContent: 'space-between' }}><span>Year 1 contract value</span> <b>$50,000</b></p>
+                <p style={{ display: 'flex', justifyContent: 'space-between' }}><span>Renewals, years 2 and 3</span> <b>$100,000</b></p>
+                <p style={{ display: 'flex', justifyContent: 'space-between' }}><span>Emergency work on top</span> <b>$15,000+</b></p>
+                <p style={{ display: 'flex', justifyContent: 'space-between', borderTop: '1px solid var(--line)', paddingTop: 14 }}>
+                  <span>One relationship</span> <b style={{ color: 'var(--accent)' }}>$165,000+</b>
+                </p>
+              </div>
+              <div className="letter-note">Your rates will differ. The shape of the math will not.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The 90-day motion */}
+      <section className="sec dark">
+        <div className="wrap">
+          <span className="eyebrow rv">The first 90 days</span>
+          <h2 className="h2 rv" data-d="1" style={{ maxWidth: 640, margin: '18px 0 52px' }}>
+            What the system does before your first renewal conversation.
+          </h2>
+          <div className="grid-3">
+            <div className="card rv" data-d="1">
+              <div className="icon-tile"><FileCheck size={20} /></div>
+              <h3 className="h3" style={{ marginBottom: 10 }}>Weeks 1 to 2: the list</h3>
+              <p style={{ fontSize: 15, color: 'var(--d-tx-2)', lineHeight: 1.7 }}>
+                Your service area is mapped: hotels, senior living, property
+                management, restaurants, industrial. Every contact is scored,
+                and the ones who can actually sign are separated from the ones
+                who never will.
+              </p>
+            </div>
+            <div className="card rv" data-d="2">
+              <div className="icon-tile"><CalendarClock size={20} /></div>
+              <h3 className="h3" style={{ marginBottom: 10 }}>Weeks 3 to 6: the campaigns</h3>
+              <p style={{ fontSize: 15, color: 'var(--d-tx-2)', lineHeight: 1.7 }}>
+                Emails go out in your name, from your own mailboxes, at a pace
+                that protects your domain. Replies land in one inbox with
+                suggested answers. Every open and click is tracked to a person.
+              </p>
+            </div>
+            <div className="card rv" data-d="3">
+              <div className="icon-tile"><Scale size={20} /></div>
+              <h3 className="h3" style={{ marginBottom: 10 }}>Weeks 7 to 12: the compounding</h3>
+              <p style={{ fontSize: 15, color: 'var(--d-tx-2)', lineHeight: 1.7 }}>
+                Follow-up sequences mature, meetings reach your calendar, and
+                the Friday report starts steering: which subject lines win,
+                which industries answer, where to push next.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Numbers you can audit */}
       <section className="sec">
         <div className="wrap" style={{ maxWidth: 780 }}>
           <div className="rv">
-            <span className="eyebrow">The situation</span>
-            <h2 className="h2" style={{ margin: '16px 0 18px' }}>Five companies, one person, zero system</h2>
+            <span className="eyebrow">Numbers you can audit</span>
+            <h2 className="h2" style={{ margin: '16px 0 18px' }}>We report like you answer to a board.</h2>
             <p style={{ fontSize: 16.5, lineHeight: 1.75, color: 'var(--tx-2)', marginBottom: 16 }}>
-              Each operating company had its own market, its own mailbox, and
-              its own half-finished lead list. Cold emails were written one at
-              a time and sent from Outlook. Nobody knew which messages worked
-              because nothing was tracked. Follow-up happened when someone
-              remembered.
+              Every percentage in PlumFlow carries its raw count next to it. A
+              50% reply rate on two sends says so. Small samples are labeled
+              small. The Friday report your team reads shows the same numbers
+              the system sees, with proposed changes you approve or dismiss,
+              because nothing about your outreach should change without your
+              sign-off.
             </p>
             <p style={{ fontSize: 16.5, lineHeight: 1.75, color: 'var(--tx-2)' }}>
-              The group&apos;s leadership wanted pipeline they could inspect. The
-              outreach manager wanted his evenings back. Those are the two
-              problems PlumFlow was built to solve.
-            </p>
-          </div>
-
-          <div className="rv" style={{ marginTop: 64 }}>
-            <span className="eyebrow">What changed</span>
-            <h2 className="h2" style={{ margin: '16px 0 18px' }}>The system took over the grunt work</h2>
-            <p style={{ fontSize: 16.5, lineHeight: 1.75, color: 'var(--tx-2)', marginBottom: 16 }}>
-              Fifteen thousand leads went in and got scored. The obvious
-              time-wasters, realtors, HR contacts, agencies, were cut before a
-              single email went out. The AI wrote each message for the specific
-              building and industry, sent from each company&apos;s own mailbox at a
-              pace that protects the domain, and queued follow-ups for day 3,
-              5, and 10.
-            </p>
-            <p style={{ fontSize: 16.5, lineHeight: 1.75, color: 'var(--tx-2)' }}>
-              Replies landed in one inbox with AI-suggested responses. Meetings
-              got booked with facility managers, a church administrator, a
-              national facilities vendor. Two vendor registration doors opened
-              from cold replies. LinkedIn ran alongside email with a 27.8%
-              connection accept rate, every invite approved by a human first.
-            </p>
-          </div>
-
-          <div className="rv" style={{ marginTop: 64 }}>
-            <span className="eyebrow">The part that went wrong</span>
-            <h2 className="h2" style={{ margin: '16px 0 18px' }}>One bad week, and what it taught the product</h2>
-            <p style={{ fontSize: 16.5, lineHeight: 1.75, color: 'var(--tx-2)', marginBottom: 16 }}>
-              In July, reply rates collapsed for a week. The cause was not the
-              copy and not the market: a backlog of stale drafts from May had
-              been quietly going out weeks late, tripling daily volume and
-              sending follow-ups that no longer made sense. Mailbox reputation
-              took the hit.
-            </p>
-            <p style={{ fontSize: 16.5, lineHeight: 1.75, color: 'var(--tx-2)' }}>
-              The fix is now built into PlumFlow for every customer: drafts
-              expire instead of sending late, daily limits are enforced across
-              manual and automated sends together, and pausing a mailbox
-              actually pauses everything. We tell this story on purpose. A
-              vendor who has never broken deliverability is a vendor who has
-              never really run outreach.
-            </p>
-          </div>
-
-          <div className="rv" style={{ marginTop: 64 }}>
-            <span className="eyebrow">Where it stands</span>
-            <h2 className="h2" style={{ margin: '16px 0 18px' }}>Every Friday, leadership gets the truth</h2>
-            <p style={{ fontSize: 16.5, lineHeight: 1.75, color: 'var(--tx-2)' }}>
-              The week ends with a report: sends, replies with raw counts,
-              meetings, which subject families won, and proposed changes the
-              operator approves or dismisses. The group&apos;s leadership reads the
-              same numbers the operator sees. No rounding up, no vanity
-              metrics, and small samples are labeled as exactly that.
+              PlumFlow grew up inside a working multi-company commercial
+              plumbing group before it was ever a product. Every feature exists
+              because a contractor needed it on a Tuesday, not because a
+              roadmap said so. That is also why the reporting is honest: it was
+              built to be read by the people who sign the checks.
             </p>
           </div>
         </div>
@@ -132,11 +163,11 @@ export default function Results() {
       <section className="sec dark dark-grid" style={{ textAlign: 'center' }}>
         <div className="wrap">
           <h2 className="h2 rv" style={{ maxWidth: 620, margin: '0 auto 16px' }}>
-            Want this running in <span style={{ color: 'var(--copper-lt)' }}>your market?</span>
+            Run the math on <span style={{ color: 'var(--accent-lt)' }}>your service area.</span>
           </h2>
           <p className="lead rv" data-d="1" style={{ maxWidth: 480, margin: '0 auto 34px' }}>
-            We will show you the exact system above, live, on your own service
-            area.
+            Thirty minutes. We will pull real buildings from your market and
+            show you exactly who the system would reach first.
           </p>
           <div className="rv" data-d="2">
             <BookDemoButton className="btn btn-copper">

@@ -17,8 +17,8 @@ export default function Home() {
         <div className="spec-strip" aria-hidden>
           <div className="spec-strip-in">
             <span>Outbound system <b>/</b> commercial plumbing</span>
-            <span>Running on five OpCos today</span>
-            <span>Charlotte · Jacksonville · Augusta · Baton Rouge</span>
+            <span>Decision-makers, not directories</span>
+            <span>For contractors across the United States</span>
           </div>
         </div>
         <div className="wrap">
@@ -29,7 +29,7 @@ export default function Home() {
                 <br />
                 your business.
                 <br />
-                <span style={{ color: 'var(--copper)' }}>Outbound will triple&nbsp;it.</span>
+                <span style={{ color: 'var(--accent)' }}>Outbound will triple&nbsp;it.</span>
               </h1>
               <p className="hero-sub rv" data-d="1">
                 PlumFlow finds the facility managers who sign maintenance
@@ -97,8 +97,8 @@ export default function Home() {
         <div className="tick-track">
           {[0, 1].map(k => (
             <span key={k} style={{ display: 'contents' }}>
-              <span><b>15,000+</b> commercial leads scored</span>
-              <span><b>5</b> plumbing OpCos live today</span>
+              <span>every email written for <b>one person</b>, not a list</span>
+              <span>one system for <b>every branch and market</b></span>
               <span>follow-ups stop <b>the moment</b> someone replies</span>
               <span>sends only <b>weekdays, 8am to 5pm</b> in your prospect&apos;s timezone</span>
               <span>every percentage reported <b>with its raw count</b></span>
@@ -156,7 +156,7 @@ export default function Home() {
         <div className="wrap">
           <span className="eyebrow rv">The system</span>
           <h2 className="h2 rv" data-d="1" style={{ maxWidth: 620, margin: '18px 0 14px' }}>
-            One screen tells you <span style={{ color: 'var(--copper)' }}>who to call today.</span>
+            One screen tells you <span style={{ color: 'var(--accent)' }}>who to call today.</span>
           </h2>
           <p className="lead rv" data-d="2" style={{ maxWidth: 560, marginBottom: 48 }}>
             Every lead, every send, every open, every reply. Scored, tracked,
@@ -236,30 +236,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── STATS ── */}
+      {/* ── ECONOMICS ── */}
       <section className="sec dark dark-grid">
         <div className="wrap">
-          <span className="eyebrow rv">Field results</span>
+          <span className="eyebrow rv">The math</span>
           <h2 className="h2 rv" data-d="1" style={{ maxWidth: 620, margin: '18px 0 52px' }}>
-            Not a launch promise. A system already at work.
+            One contract pays for everything else.
           </h2>
           <div className="grid-3" style={{ gap: 44 }}>
             <div className="rv" data-d="1">
-              <div className="stat-big"><CountUp value={15000} suffix="+" /></div>
-              <div className="stat-lbl">commercial leads imported and AI-scored across five operating companies</div>
+              <div className="stat-big"><CountUp value={50} prefix="$" suffix="k+" /></div>
+              <div className="stat-lbl">what a single commercial maintenance contract can be worth every year, before emergency work is even counted</div>
             </div>
             <div className="rv" data-d="2">
-              <div className="stat-big"><CountUp value={3} /> <em>meetings</em></div>
-              <div className="stat-lbl">booked in a single week of one cold campaign, tracked from first touch to calendar</div>
+              <div className="stat-big">5 <em>to</em> 8</div>
+              <div className="stat-lbl">touches it typically takes to win one. PlumFlow runs every touch, on time, and stops the moment they reply</div>
             </div>
             <div className="rv" data-d="3">
-              <div className="stat-big"><CountUp value={2} /> <em>vendors</em></div>
-              <div className="stat-lbl">national vendor registrations won from replies, each one a door to recurring work</div>
+              <div className="stat-big"><CountUp value={75} prefix="$" suffix="k" /></div>
+              <div className="stat-lbl">the salary of a sales hire who makes those calls. PlumFlow does the finding, writing, and following up for a fraction</div>
             </div>
           </div>
           <p className="rv" data-d="3" style={{ marginTop: 44, fontSize: 14, color: 'var(--d-tx-3)', maxWidth: 560 }}>
-            Numbers from the live deployment inside a private-equity-backed
-            plumbing group. <Link href="/results" style={{ color: 'var(--copper-lt)' }}>Read how they did it →</Link>
+            <Link href="/results" style={{ color: 'var(--accent-lt)' }}>See the full economics →</Link>
           </p>
         </div>
       </section>
@@ -271,7 +270,7 @@ export default function Home() {
             <div>
               <span className="eyebrow rv">The writing</span>
               <h2 className="h2 rv" data-d="1" style={{ margin: '18px 0 14px' }}>
-                Emails a facility manager <span style={{ color: 'var(--copper)' }}>actually answers.</span>
+                Emails a facility manager <span style={{ color: 'var(--accent)' }}>actually answers.</span>
               </h2>
               <p className="lead rv" data-d="2" style={{ marginBottom: 24 }}>
                 Written one at a time, in plain text, about their building and
@@ -285,7 +284,7 @@ export default function Home() {
                   'Follow-ups bring a new angle, never "just checking in."',
                 ].map((t, i) => (
                   <li key={i} className="rv" data-d={String(i + 1)} style={{ display: 'flex', gap: 10, fontSize: 15, color: 'var(--tx-2)' }}>
-                    <Check size={17} style={{ color: 'var(--copper)', flexShrink: 0, marginTop: 3 }} /> {t}
+                    <Check size={17} style={{ color: 'var(--accent)', flexShrink: 0, marginTop: 3 }} /> {t}
                   </li>
                 ))}
               </ul>
@@ -300,7 +299,7 @@ export default function Home() {
                 <p>
                   When a guest bathroom floods at 11pm, the difference between a
                   bad night and a bad week is who picks up the phone. Most
-                  hotels in Charlotte find out their plumber&apos;s real response
+                  hotel groups find out their plumber&apos;s real response
                   time the hard way.
                 </p>
                 <p>
@@ -320,7 +319,7 @@ export default function Home() {
       <section className="sec dark dark-grid" style={{ textAlign: 'center' }}>
         <div className="wrap">
           <h2 className="h1 rv" style={{ fontSize: 'clamp(36px, 4.6vw, 60px)', maxWidth: 760, margin: '0 auto 18px' }}>
-            See it running <span style={{ color: 'var(--copper-lt)' }}>on your leads.</span>
+            See it running <span style={{ color: 'var(--accent-lt)' }}>on your leads.</span>
           </h2>
           <p className="lead rv" data-d="1" style={{ maxWidth: 520, margin: '0 auto 36px' }}>
             Bring a list of 50 buildings you want as customers. We will score

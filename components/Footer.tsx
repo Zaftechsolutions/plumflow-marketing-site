@@ -11,15 +11,15 @@ export default function Footer() {
               <b style={{ fontFamily: 'var(--font-d)', fontSize: 17, color: 'var(--d-tx)' }}>PlumFlow</b>
             </div>
             <p>
-              The outbound sales system for commercial plumbing. Built inside a
-              five-company plumbing group, tested on real facility managers,
-              shipped because it worked.
+              The outbound sales system for commercial plumbing. It finds the
+              buildings, reaches the decision-makers, and keeps the follow-up
+              honest, so the work finds you.
             </p>
           </div>
           <div>
             <h4>Product</h4>
             <Link href="/platform">Platform</Link>
-            <Link href="/results">Results</Link>
+            <Link href="/results">Why it pays</Link>
             <Link href="/pricing">Pricing</Link>
             <a href="https://app.plumflow.io">Sign in</a>
           </div>
@@ -33,7 +33,7 @@ export default function Footer() {
             <h4>Built for</h4>
             <span style={{ display: 'block', fontSize: 14.5, marginBottom: 11 }}>Commercial plumbing companies</span>
             <span style={{ display: 'block', fontSize: 14.5, marginBottom: 11 }}>Mechanical contractors</span>
-            <span style={{ display: 'block', fontSize: 14.5 }}>Multi-OpCo trade groups</span>
+            <span style={{ display: 'block', fontSize: 14.5 }}>Multi-branch contractor groups</span>
           </div>
         </div>
         <div className="footer-btm">
