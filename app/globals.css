@@ -345,6 +345,21 @@ html.fx .rv:not(.in) { opacity: 0; transform: translateY(22px); }
 /* ── Page hero (inner pages) ───────────────────────────────────── */
 .page-hero { padding: 84px 0 60px; }
 
+/* ── Platform capability cards (alternating, collapse on mobile) ── */
+.cap-card { display: grid; grid-template-columns: 1.25fr 1fr; gap: 40px; align-items: center; padding: 40px; }
+.cap-card.flip { grid-template-columns: 1fr 1.25fr; }
+.cap-card.flip .cap-copy { order: 2; }
+.cap-card.flip .cap-visual { order: 1; }
+@media (max-width: 960px) {
+  .cap-card, .cap-card.flip { grid-template-columns: 1fr; gap: 26px; padding: 26px; }
+  .cap-card.flip .cap-copy { order: 1; }
+  .cap-card.flip .cap-visual { order: 2; }
+}
+
+/* ── Horizontal scroll shell for wide tables on small screens ───── */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--r); }
+.table-scroll .cmp { min-width: 680px; }
+
 /* ── Comparison table ──────────────────────────────────────────── */
 .cmp { width: 100%; border-collapse: collapse; background: var(--white); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
 .cmp th, .cmp td { padding: 15px 20px; text-align: left; font-size: 14.5px; border-bottom: 1px solid var(--line-2); }
@@ -367,6 +382,7 @@ html.fx .rv:not(.in) { opacity: 0; transform: translateY(22px); }
 }
 @media (max-width: 560px) {
   .footer-grid { grid-template-columns: 1fr; }
+  .nav-signin { display: none; }
   .pipe-name { font-size: 9px; }
   .spec-strip-in span:nth-child(3) { display: none; }
   .spec-strip-in { justify-content: flex-start; }

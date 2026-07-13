@@ -6,7 +6,7 @@ import Fx from '@/components/Fx';
 import BookDemoButton from '@/components/BookDemoButton';
 
 export const metadata: Metadata = {
-  title: 'Platform — PlumFlow',
+  title: 'Platform · PlumFlow',
   description:
     'Lead discovery, AI scoring, one-at-a-time email writing, deliverability discipline, automated follow-up, LinkedIn outreach, and a Friday report that tells the truth.',
 };
@@ -22,7 +22,7 @@ const CAPS: {
     title: 'Real buildings, real buyers, in your service area',
     body: 'Search by trade and territory, import your own lists, or pull from public records. One team found 180 restaurants with failing health inspections and turned the worst scores into a call list. Every lead lands with company, contact, and address attached.',
     panel: {
-      label: 'DISCOVERY RUN — CHARLOTTE METRO',
+      label: 'DISCOVERY RUN · YOUR SERVICE AREA',
       rows: [
         ['Harborview Hotels', 'Facility Manager found', 'ok'],
         ['Crown Point Plaza', 'Property Manager found', 'ok'],
@@ -64,7 +64,7 @@ const CAPS: {
     title: 'One email at a time, in your voice',
     body: 'No templates and no mail merge. Each message is written for that person, that building, that industry, with real trade knowledge behind it: grease trap cycles, backflow certification deadlines, what an after-hours failure actually costs. Banned-phrase rules keep it out of spam filters and out of cliche.',
     panel: {
-      label: 'DRAFT — STEP 1 OF 4',
+      label: 'DRAFT · STEP 1 OF 4',
       rows: [
         ['Subject', 'after-hours plumber', ''],
         ['Angle', 'Guaranteed response time', ''],
@@ -106,7 +106,7 @@ const CAPS: {
     title: 'A second channel, same discipline',
     body: 'Connection requests and openers for the same decision-makers, with daily limits and human approval before anything goes out. Replies and interest show up in the same weekly numbers as email, so you see the whole picture in one place.',
     panel: {
-      label: 'LINKEDIN — THIS WEEK',
+      label: 'LINKEDIN · THIS WEEK',
       rows: [
         ['Invites sent', '18 approved by you', ''],
         ['Accepted', '5 · 27.8%', 'ok'],
@@ -120,7 +120,7 @@ const CAPS: {
     title: 'A weekly scoreboard that tells the truth',
     body: 'Every Friday: sends, replies, meetings, which subject lines won, which industries answered, and 3 to 5 proposed changes for next week. You approve or dismiss each one; nothing changes itself. Every percentage carries its raw count, and small samples are labeled as small samples.',
     panel: {
-      label: 'WEEKLY REPORT — EXCERPT',
+      label: 'WEEKLY REPORT · EXCERPT',
       rows: [
         ['Reply rate', '3.2% · 41 of 1,284', ''],
         ['Best subject family', 'after-hours · 8.5%', 'ok'],
@@ -154,18 +154,8 @@ export default function Platform() {
       <section className="sec-tight">
         <div className="wrap" style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
           {CAPS.map((c, i) => (
-            <div
-              key={c.tag}
-              className="card rv"
-              style={{
-                display: 'grid',
-                gridTemplateColumns: i % 2 ? '1fr 1.25fr' : '1.25fr 1fr',
-                gap: 40,
-                alignItems: 'center',
-                padding: 40,
-              }}
-            >
-              <div style={{ order: i % 2 ? 2 : 1 }}>
+            <div key={c.tag} className={`card rv cap-card${i % 2 ? ' flip' : ''}`}>
+              <div className="cap-copy">
                 <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 16 }}>
                   <div className="step-num">{String(i + 1).padStart(2, '0')}</div>
                   <span className="eyebrow" style={{ fontSize: 11 }}>{c.tag}</span>
@@ -173,7 +163,7 @@ export default function Platform() {
                 <h2 style={{ fontSize: 26, marginBottom: 12, lineHeight: 1.15 }}>{c.title}</h2>
                 <p style={{ fontSize: 15.5, color: 'var(--tx-2)', lineHeight: 1.7 }}>{c.body}</p>
               </div>
-              <div style={{ order: i % 2 ? 1 : 2 }}>
+              <div className="cap-visual">
                 <div style={{ background: 'var(--ink)', borderRadius: 12, padding: '18px 20px', boxShadow: 'var(--shadow-lg)' }}>
                   <div style={{ fontFamily: 'var(--font-m)', fontSize: 10, letterSpacing: '0.1em', color: 'var(--d-tx-3)', marginBottom: 14 }}>
                     {c.panel.label}

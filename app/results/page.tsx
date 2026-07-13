@@ -7,7 +7,7 @@ import BookDemoButton from '@/components/BookDemoButton';
 import CountUp from '@/components/CountUp';
 
 export const metadata: Metadata = {
-  title: 'The economics — PlumFlow',
+  title: 'The economics · PlumFlow',
   description:
     'What one commercial maintenance contract is worth, what it takes to win it, and why PlumFlow pays for itself with the first win.',
 };

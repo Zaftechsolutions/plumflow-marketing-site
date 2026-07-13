@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
           <div>
             <h4>Company</h4>
-            <a href="mailto:hello@plumflow.io">hello@plumflow.io</a>
+            <a href="mailto:Info@plumflow.io">Info@plumflow.io</a>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
           </div>

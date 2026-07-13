@@ -6,7 +6,7 @@ import Fx from '@/components/Fx';
 import BookDemoButton from '@/components/BookDemoButton';
 
 export const metadata: Metadata = {
-  title: 'Pricing — PlumFlow',
+  title: 'Pricing · PlumFlow',
   description:
     'Priced like the hire it replaces, minus the salary. Pilot in 30 days, scale by operating company. Custom quote on a 30-minute call.',
 };
@@ -35,7 +35,7 @@ export default function Pricing() {
       {/* Comparison */}
       <section className="sec-tight">
         <div className="wrap">
-          <div className="rv" style={{ overflowX: 'auto' }}>
+          <div className="rv table-scroll">
             <table className="cmp">
               <thead>
                 <tr>

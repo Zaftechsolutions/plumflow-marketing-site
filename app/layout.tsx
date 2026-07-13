@@ -10,11 +10,11 @@ const mono = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "500", "600"],
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://plumflow.io"),
-  title: "PlumFlow — The outbound sales system for commercial plumbing",
+  title: "PlumFlow · The outbound sales system for commercial plumbing",
   description:
     "PlumFlow finds the facility managers who sign maintenance contracts, writes outreach that sounds like you, and tells you exactly who to call next. Built for commercial plumbing companies across the United States.",
   openGraph: {
-    title: "PlumFlow — The outbound sales system for commercial plumbing",
+    title: "PlumFlow · The outbound sales system for commercial plumbing",
     description:
       "Finds the right decision-makers, writes outreach that sounds like you, and tells you who to call next. Built for commercial plumbing companies across the United States.",
     url: "https://plumflow.io",
