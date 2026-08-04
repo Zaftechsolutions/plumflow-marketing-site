@@ -22,6 +22,16 @@ export const metadata: Metadata = {
     siteName: "PlumFlow",
     type: "website",
   },
+  // The card image itself comes from app/opengraph-image.png and
+  // app/twitter-image.png. Those file conventions emit the image tags but
+  // not the card type, and X defaults to the small "summary" card, so the
+  // large one has to be asked for explicitly.
+  twitter: {
+    card: "summary_large_image",
+    title: "PlumFlow · The outbound sales system for commercial plumbing",
+    description:
+      "Finds the right decision-makers, writes outreach that sounds like you, and tells you who to call next. Built for commercial plumbing companies across the United States.",
+  },
   icons: { icon: "/logo.svg", apple: "/logo.png" },
 };
 
