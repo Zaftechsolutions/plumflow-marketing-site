@@ -15,12 +15,27 @@ const LINKS = [
 export default function Nav() {
   const path = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   // Close the sheet whenever the route changes
   useEffect(() => { setOpen(false); }, [path]);
 
+  // The home hero is dark, so the bar rides transparent over it and only
+  // takes its glass background once you scroll past. Every other route is
+  // on porcelain and keeps the glass from the first pixel.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // The open sheet needs a solid background to be readable, so it drops
+  // the transparent treatment even at the top of the page.
+  const overHero = path === '/' && !scrolled && !open;
+
   return (
-    <nav className="nav">
+    <nav className={overHero ? 'nav nav-over' : 'nav'}>
       <div className="nav-in">
         <Link href="/" className="nav-logo">
           <img src="/mark.svg" alt="" />

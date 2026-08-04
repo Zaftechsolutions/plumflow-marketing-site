@@ -109,7 +109,25 @@ h1, h2, h3 { font-family: var(--font-d); font-weight: 700; letter-spacing: -0.02
   position: sticky; top: 0; z-index: 100;
   background: rgba(245, 248, 249, 0.86); backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line-2);
+  transition: background 0.25s ease, border-color 0.25s ease;
 }
+
+/* Riding over the dark home hero: no plate, no border, light type. The
+   mark keeps its ink tile, so it gets a hairline ring to stay defined. */
+.nav-over { background: transparent; backdrop-filter: none; border-bottom-color: transparent; }
+.nav-over .nav-logo img { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18); }
+.nav-over .nav-logo b { color: var(--d-tx); }
+.nav-over .nav-links a { color: var(--d-tx-2); }
+.nav-over .nav-links a:hover, .nav-over .nav-links a.on { color: var(--d-tx); }
+.nav-over .nav-signin { color: var(--d-tx); }
+.nav-over .nav-signin:hover { background: rgba(255, 255, 255, 0.1); }
+.nav-over .nav-book { background: var(--accent-lt); color: var(--ink); }
+.nav-over .nav-book:hover { background: #9BDCE5; }
+.nav-over .nav-burger {
+  background: rgba(255, 255, 255, 0.08); color: var(--d-tx);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.nav-over .nav-burger:hover { background: rgba(255, 255, 255, 0.16); }
 .nav-in { max-width: 1140px; margin: 0 auto; padding: 0 28px; height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .nav-logo img { width: 30px; height: 30px; border-radius: 8px; }
@@ -160,7 +178,74 @@ html.fx .rv:not(.in) { opacity: 0; transform: translateY(22px); }
 }
 
 /* ── Hero ──────────────────────────────────────────────────────── */
-.hero { padding: 0 0 0; position: relative; }
+/* The hero inverts to ink so the territory plate can actually carry it.
+   Everything below the hero stays on porcelain, so every dark override
+   is scoped to .hero rather than pushed into the global tokens. */
+.hero {
+  /* Pulled up under the sticky bar (66px + its hairline) so the plate runs
+     edge to edge behind it. The matching padding puts the spec strip back
+     where it belongs, just below the bar. */
+  margin-top: -67px;
+  padding: 67px 0 0;
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--d-tx);
+  isolation: isolate;
+}
+
+/* The plate: an aerial territory wired together, which is what the product
+   actually does. The drift is slow enough to read as depth, not animation. */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -5%;
+  z-index: -2;
+  pointer-events: none;
+  background: url('/hero-city.webp') center 42% / cover no-repeat;
+  animation: heroDrift 46s ease-in-out infinite;
+}
+
+/* Scrim. The plate is busy, so the left is pushed to near-solid ink to give
+   the headline clean ground, and both edges are feathered so the nav above
+   and the porcelain section below meet it without a hard seam. */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(100deg, var(--ink) 4%, rgba(11, 23, 33, 0.94) 26%, rgba(11, 23, 33, 0.66) 55%, rgba(11, 23, 33, 0.4) 100%),
+    linear-gradient(180deg, rgba(11, 23, 33, 0.88) 0%, rgba(11, 23, 33, 0.12) 24%, rgba(11, 23, 33, 0.4) 74%, var(--ink) 100%);
+}
+
+@keyframes heroDrift {
+  0%, 100% { transform: scale(1) translate3d(0, 0, 0); }
+  50%      { transform: scale(1.06) translate3d(-1.2%, -0.8%, 0); }
+}
+@media (prefers-reduced-motion: reduce) { .hero::before { animation: none; } }
+
+/* Dark-ground overrides. The white ticket and pipeline chips are left alone
+   on purpose: they gain contrast against the ink instead of losing it. */
+.hero .spec-strip { border-bottom-color: rgba(255, 255, 255, 0.12); }
+.hero .spec-strip-in { color: var(--d-tx-3); }
+.hero .spec-strip-in b { color: var(--accent-lt); }
+.hero .h1 { color: var(--d-tx); }
+.hero-accent { color: var(--accent-lt); }
+.hero .hero-sub { color: var(--d-tx-2); }
+.hero .link-plain { color: var(--d-tx); text-decoration-color: var(--accent-lt); }
+.hero .link-plain:hover { color: var(--accent-lt); }
+.hero .btn-copper {
+  background: var(--accent-lt); color: var(--ink);
+  box-shadow: 0 12px 30px -10px rgba(121, 203, 214, 0.45);
+}
+.hero .btn-copper:hover { background: #9BDCE5; }
+.hero .pipeline { border-top-color: rgba(255, 255, 255, 0.12); }
+.hero .pipe-dot { background: var(--ink-3); border-color: rgba(255, 255, 255, 0.32); }
+.hero .pipe-line { background: rgba(255, 255, 255, 0.14); }
+.hero .pipe-name { color: var(--d-tx-2); }
+.hero .pipe-sub { color: var(--d-tx-3); }
 
 /* Spec strip: technical-sheet header instead of a hero badge */
 .spec-strip { border-bottom: 1px solid var(--line); }

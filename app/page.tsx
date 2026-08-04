@@ -29,7 +29,7 @@ export default function Home() {
                 <br />
                 your business.
                 <br />
-                <span style={{ color: 'var(--accent)' }}>Outbound will triple&nbsp;it.</span>
+                <span className="hero-accent">Outbound will triple&nbsp;it.</span>
               </h1>
               <p className="hero-sub rv" data-d="1">
                 PlumFlow finds the facility managers who sign maintenance
