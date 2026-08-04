@@ -194,21 +194,35 @@ html.fx .rv:not(.in) { opacity: 0; transform: translateY(22px); }
   isolation: isolate;
 }
 
-/* The plate: an aerial territory wired together, which is what the product
-   actually does. The drift is slow enough to read as depth, not animation. */
+/* Still fallback, sitting under the video. It shows if the video fails, while
+   it is still loading past the poster, and for reduced-motion users. */
 .hero::before {
   content: '';
   position: absolute;
-  inset: -5%;
-  z-index: -2;
+  inset: 0;
+  z-index: -3;
   pointer-events: none;
-  background: url('/hero-city.webp') center 42% / cover no-repeat;
-  animation: heroDrift 46s ease-in-out infinite;
+  background: url('/hero-poster.webp') center / cover no-repeat;
 }
 
-/* Scrim. The plate is busy, so the left is pushed to near-solid ink to give
-   the headline clean ground, and both edges are feathered so the nav above
-   and the porcelain section below meet it without a hard seam. */
+/* The plate: an aerial territory wired together, which is what the product
+   actually does. Boomerang-encoded so the loop has no visible jump. */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+  border: 0;
+}
+@media (prefers-reduced-motion: reduce) { .hero-video { display: none; } }
+
+/* Scrim. Measured against the footage, the left third averages ~13% luminance
+   on its own, so this only has to take the edge off rather than black it out.
+   Both edges are feathered so the nav above and the porcelain section below
+   meet it without a hard seam. */
 .hero::after {
   content: '';
   position: absolute;
@@ -216,15 +230,9 @@ html.fx .rv:not(.in) { opacity: 0; transform: translateY(22px); }
   z-index: -1;
   pointer-events: none;
   background:
-    linear-gradient(100deg, var(--ink) 4%, rgba(11, 23, 33, 0.94) 26%, rgba(11, 23, 33, 0.66) 55%, rgba(11, 23, 33, 0.4) 100%),
-    linear-gradient(180deg, rgba(11, 23, 33, 0.88) 0%, rgba(11, 23, 33, 0.12) 24%, rgba(11, 23, 33, 0.4) 74%, var(--ink) 100%);
+    linear-gradient(100deg, rgba(11, 23, 33, 0.96) 2%, rgba(11, 23, 33, 0.82) 25%, rgba(11, 23, 33, 0.5) 56%, rgba(11, 23, 33, 0.3) 100%),
+    linear-gradient(180deg, rgba(11, 23, 33, 0.85) 0%, rgba(11, 23, 33, 0.1) 24%, rgba(11, 23, 33, 0.38) 74%, var(--ink) 100%);
 }
-
-@keyframes heroDrift {
-  0%, 100% { transform: scale(1) translate3d(0, 0, 0); }
-  50%      { transform: scale(1.06) translate3d(-1.2%, -0.8%, 0); }
-}
-@media (prefers-reduced-motion: reduce) { .hero::before { animation: none; } }
 
 /* Dark-ground overrides. The white ticket and pipeline chips are left alone
    on purpose: they gain contrast against the ink instead of losing it. */

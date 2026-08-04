@@ -14,6 +14,23 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <header className="hero">
+        {/* Decorative only. muted + playsInline are what let mobile browsers
+            autoplay at all; without them iOS silently refuses. The poster
+            covers the gap before the first frame, and reduced-motion users
+            never load the video, they keep the still. */}
+        <video
+          className="hero-video"
+          poster="/hero-poster.webp"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-hidden
+          tabIndex={-1}
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
         <div className="spec-strip" aria-hidden>
           <div className="spec-strip-in">
             <span>Outbound system <b>/</b> commercial plumbing</span>
