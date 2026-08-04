@@ -32,7 +32,10 @@ export const metadata: Metadata = {
     description:
       "Finds the right decision-makers, writes outreach that sounds like you, and tells you who to call next. Built for commercial plumbing companies across the United States.",
   },
-  icons: { icon: "/logo.svg", apple: "/logo.png" },
+  // Icons come from the app/ file conventions now: favicon.ico, icon.svg and
+  // apple-icon.png. They used to be pointed at logo.png, which was still the
+  // pre-rebrand cartoon mark, 1536x1024 and 2.3MB, so it was serving the wrong
+  // brand as the tab and home-screen icon.
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

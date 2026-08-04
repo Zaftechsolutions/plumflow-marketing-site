@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- PlumFlow mark: a pipe drawn as the letter P, with a drop in flow -->
+  <rect width="64" height="64" rx="15" fill="#0B1721"/>
+  <path d="M23 51 V20 Q23 15 28 15 H35 Q46 15 46 25 Q46 35 35 35 H23"
+        stroke="#F5F8F9" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M46 41 C49.2 45.4 49.2 48.6 46 49.8 C42.8 48.6 42.8 45.4 46 41 Z" fill="#40C4D4"/>
+</svg>
